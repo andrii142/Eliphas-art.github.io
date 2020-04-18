@@ -1,0 +1,94 @@
+header {
+  background-image: url("../res/header.png");
+  background-size: 100%;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 4em 1fr;
+  align-items: center;
+  align-content: center;
+  color: white; }
+  header a {
+    color: white;
+    text-decoration: none; }
+  header nav {
+    padding: 40px 70px;
+    align-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 3fr 1fr; }
+    header nav ul {
+      display: grid;
+      grid-auto-flow: column; }
+  header .slogan {
+    text-align: center; }
+    header .slogan h2 {
+      font-size: 60pt; }
+    header .slogan * {
+      padding: 50px; }
+
+.summary {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: center;
+  align-items: center; }
+  .summary .name {
+    text-align: end;
+    font-weight: bold;
+    opacity: 0.8; }
+  .summary * {
+    padding-top: 10px; }
+  .summary ul {
+    padding: 15px 0; }
+    .summary ul li {
+      margin: 20px; }
+  .summary .img_wrap {
+    border-style: solid;
+    text-align: center;
+    width: 80%;
+    height: 90%; }
+    .summary .img_wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0; }
+
+.works {
+  height: 55vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center; }
+  .works .task > * {
+    margin: 50px; }
+    .works .task > * input {
+      width: 100%; }
+    .works .task > * p {
+      margin-bottom: 15px; }
+  .works .btn {
+    padding: 5px;
+    text-align: end; }
+  .works .result {
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("../res/header.png");
+    color: white; }
+    .works .result > * {
+      margin-left: 5em; }
+
+body {
+  font-size: 16pt; }
+  body h2 {
+    padding: 50px 0;
+    font-size: 42pt; }
+  body .grey {
+    margin: 20px; }
+    body .grey * {
+      margin: 5px;
+      opacity: 0.5; }
+  body section {
+    height: 80vh; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,31 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Info Gromcode</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>React App</title>
+  </head>
+  <body>
+  <header id="header">
+    <nav>
+      <h1>Summary</h1>
+      <div class="menu">
+        <ul>
+          <li><a href="#summary">Резюме</a></li>
+          <li><a href="#works">Задания</a></li>
+          <li><a href="#footer">footer</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="slogan">
+      <h2>We love to write code |</h2>
+      <p>Salem is a new and modern one page Wordpress theme, designed and aimed at creative teams that want to showcase your products and services in a new and creative way </p>
+    </div>
+  </header>
+  <section id="summary" class="summary">
+    <div>
+      <h2>Резюме на должность Front-end разработчика</h2>
+      <p class="name">Меня зовут Сергей Никитченко</p>
+      <span class="grey">
+      <p>Нашел себя на направлении Front-End разработчика</p>
+      <p>Поэтому и оформил заявку на обучение</p>
+      </span>
+      <ul> Планирую развиваться в направлениях
+        <li>HTML5/CSS 3</li>
+        <li>JS преимущественно React/Redux</li>
+        <li>А так-же php но исключительно для простеньких заданий</li>
+      </ul>
+      <p>Занимаюсь самообучением и созданием сайтов на заказ</p>
+      <p>В 2018 году окончил курсы «qatestlab» тестирование программного обеспечения и сайтов.</p>
+    </div>
+    <div class="img_wrap">
+      <img src="https://lh3.googleusercontent.com/NqUcUzcNZrBf7u0pT5mBex8PLJreHErQ9SRcWbbT9CQnFd4D-4xq4aMg_kcte64yEZ0udBX4KlP0wVr28E8PtiFY-ChONzoklvLDNdeMucBK7I-BZbBGtjvl7MPub-gWu9mlFWbwAR5DP8QFtHhpa0JwjQMiw52KrejzRpI0X47MmsjViL1fbSTUZhZcmXiFiMelhUrVEzuqwFBanzP_BA4mxnzqNyMmYbzMjV3P7hdgHtYAUYug9RsMU7m5bBEKXHrZDzHo5rb47mqyZgg3z-a-c7b_0c9oeaDICFO7Jm1_hI1vzM_WbKNCXhOZoZ0IBxOxOGOG8ai4Inzrv6fcMpCv4hLW6IkhuurJfQN_zKOBKkAwPQsDj7IvYCvxifhvsfKwZuU44lhg3NUCLpPFhI2XWZIZm55YdeSa4s4SoOR3GARhO6Fwn2rQ9jj3GmrYfNfFTusEpOmhQF8A_G57T_uVmvI5FRHNDLG2eVM5XfRVzRyWMR9QEMIzFvqWYO36bD8RFYUMsA1cHWXQLWeW1nMfmV-DeHmDB9Q1boQcvMw0LsWEUu-xEQohrgQ3noh55kpV4sPU5d--oxqhm9JqpY8temdNiuGi2-i3uoMLrHjJ2naDlyqsqHMXqGx0OfxLB0OB06thFQG9rZEJ42oadS_EbLDH6Y_8Vk1lJoCm8-JWSe-6s3r0-5F-m7cfIw=w735-h979-no" alt="vertical" />
+    </div>
+  </section>
+  <section id="works" class="works">
+    <div class="task">
+      <div>
+        <p> Поиск минимального элемента массива:</p>
+        <input id="getMin" placeholder="Введите числа через запятую">
+        <p class="btn"><button id="getMinButton">Click</button></p>
+      </div>
+      <div>
+        <p>Поиск парных чисел: </p>
+        <input id="getEven" placeholder="Введите числа через запятую">
+        <p class="btn"><button id="getEvenButton">Click</button></p>
 
-min Array: <input id="getMin">
-<button id="getMinButton">Click</button>
-<div id="minNameResult"></div>
-<br />
-get Even: <input id="getEven">
-<button id="getEvenButton">Click</button>
-<div id="getEvenResult"></div>
-<br />
-search By Name: <input id="searchByName">
-<button id="searchByNameButton">Click</button>
-<div id="searchByNameResult"></div>
+      </div>
+      <div>
+        <p>Введите пользователя: </p>
+        <input id="searchByName" placeholder="Введите имя пользователя">
+        <p class="btn"><button id="searchByNameButton">Click</button></p>
+      </div>
+    </div>
+    <div class="result">
+      <div>
+        <span>Минимальный элемент массива:</span>
+        <br>
+        <span id="minNameResult"> Значение не введено</span>
+      </div>
+      <div>
+        <span>Парные числа массива</span>
+        <br>
+        <span id="getEvenResult"> Значение не введено</span>
+      </div>
+      <div>
+        <span>Поиск пользователей</span>
+        <br>
 
-<hr>
-<div id="result"></div>
+        <span id="searchByNameResult"> Значение не введено</span>
+      </div>
+    </div>
+  </section>
+  <section id="footer" class="footer">
+    <div>
+      <nav>
+        <ul>
+          <li><a href="#header">Header</a></li>
+          <li><a href="#summary">Резюме</a></li>
+          <li><a href="#works">Задания</a></li>
+        </ul>
+      </nav>
+      <div></div>
+    </div>
+    <div>
+      <h2>Summary</h2>
+      <ul>
+        <span>Номер телефона: </span>
+        <li>+(380) 95 668 6191</li>
+        <li>+(380) 95 448 9868</li>
+      </ul>
+      <ul>
+        <li><a href="">Instagram</a></li>
+        <li><a href="">Facebook</a></li>
+        <li><a href="">GitHib</a></li>
+      </ul>
+    </div>
 
-<script src="js/index.js">
-
-</script>
-</body>
+  </section>
+  <script src="js/index.js">
+  </script>
+  </body>
 </html>

@@ -19,7 +19,7 @@ const getMin = () => {
     }
     document.getElementById('minNameResult').innerHTML = min;
 };
- document.getElementById('getMinButton').addEventListener('click', getMin);
+document.getElementById('getMinButton').addEventListener('click', getMin);
 
 
 const getEven = () => {
@@ -29,7 +29,7 @@ const getEven = () => {
     while (len--)
         if (Math.ceil(getText[len] / 2) == getText[len] / 2) {
             if (getText[len])
-            array.push(getText[len]);
+                array.push(getText[len]);
         }
     document.getElementById('getEvenResult').innerHTML = array;
 };
@@ -38,8 +38,26 @@ document.getElementById('getEvenButton').addEventListener('click', getEven);
 const searchByName = () => {
     let getText = document.getElementById('searchByName').value;
     let result = searchByNameArr.filter(item => item.name == getText);
-    if (result.length < 1)
-        result = "Данного имени нету в базе данных";
+    if (result.length < 1) {
+        document.getElementById('searchByNameResult').innerHTML = "Данного пользователя нету в базе данных";
+        let p = document.createElement("p");
+        p.innerHTML = "Данного пользователя нету в базе данных";
+        p.id = "searchByNameResult";
+        let afterResult = document.getElementById("searchByNameResult");
+
+        afterResult.replaceWith(p);
+    }
+    else {
+        let textarea = document.createElement("textarea");
+        let resultOut = [];
+        for (let i =0; i < result.length; i++){
+            resultOut.push(result[i].name + ': ' + result[i].birthDate)
+        }
+        textarea.innerHTML = resultOut;
+        textarea.id = "searchByNameResult";
+        let afterResult = document.getElementById("searchByNameResult");
+        afterResult.replaceWith(textarea);
+    }
     console.log(result);
 };
 
