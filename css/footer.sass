@@ -1,0 +1,36 @@
+.footer
+  height: 100%
+  display: grid
+  grid-template-columns: 2fr 1fr
+  margin-top: 50px
+  div:nth-child(1)
+    nav
+      ul
+        display: grid
+        text-align: center
+        grid-auto-flow: column
+        a
+          color: black
+          text-decoration: none
+    form
+      margin: 10%
+      display: grid
+      *
+        margin-top: 15px
+      >:nth-child(3)
+        margin-top: 25px
+  >div:nth-child(2)
+
+    ul:nth-child(3)
+      display: grid
+      grid-auto-flow: column
+  >div:last-child
+    font-size: 14pt
+    display: grid
+    align-items: center
+    color: white
+    height: 2em
+    text-align: center
+    grid-column: span 2
+    background-image: url("../res/header.png")
+
