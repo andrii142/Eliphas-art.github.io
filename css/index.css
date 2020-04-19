@@ -6,14 +6,13 @@ header {
   display: grid;
   grid-template-rows: 4em 1fr;
   align-items: center;
-  align-content: center;
   color: white; }
   header a {
     color: white;
     text-decoration: none; }
   header nav {
-    padding: 40px 70px;
-    align-content: center;
+    margin: 40px 70px;
+    align-items: center;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 3fr 1fr; }
@@ -26,11 +25,7 @@ header {
       font-size: 60pt;
       padding: 0; }
     header .slogan .hr {
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 50px; }
-    header .slogan * {
-      margin-bottom: 50px; }
+      margin: 55px auto; }
 
 .summary {
   display: grid;
@@ -79,7 +74,8 @@ header {
     grid-template-columns: 3fr 2fr;
     align-items: center;
     justify-items: center;
-    background-image: url("../res/header.png"); }
+    background-image: url("../res/header.png");
+    background-size: 100% 100%; }
     .works .works__content .task {
       padding: 20px;
       margin: 50px; }
@@ -182,6 +178,8 @@ body {
   body h2 {
     font-size: 36pt;
     text-transform: uppercase; }
+  body h3 {
+    font-size: 30pt; }
   body .grey {
     margin: 20px; }
     body .grey * {
@@ -196,8 +194,5 @@ body {
     background-color: red;
     width: 10%;
     height: 1px; }
-
-* {
-  box-sizing: border-box; }
 
 /*# sourceMappingURL=index.css.map */

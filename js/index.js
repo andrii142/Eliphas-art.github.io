@@ -45,7 +45,7 @@ const searchByName = () => {
     else {
         const resultOut = [];
         for (let i=0; i < result.length; i++){
-            resultOut.push(result[i].name + ': ' + result[i].birthDate)
+            resultOut.push(result[i].name + ': ' + result[i].birthDate+ ", \n")
         }
         replaceHtmlDom(resultOut.length > 1 ? "textarea" : "p", "result__content", resultOut);
     }
