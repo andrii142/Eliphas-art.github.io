@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
-    <title>React App</title>
+
+    <title>Summary</title>
   </head>
   <body>
   <header id="header">
@@ -20,15 +22,14 @@
     </nav>
     <div class="slogan">
       <h2>We love to write code |</h2>
-      <hr/>
-
+      <div class="hr"></div>
       <p>Salem is a new and modern one page Wordpress theme, designed and aimed at creative teams that want to showcase your products and services in a new and creative way </p>
     </div>
   </header>
   <section id="summary" class="summary">
-    <div>
+    <div class="summary__text">
       <h2>Резюме на должность Front-end разработчика</h2>
-      <hr/>
+      <div class="hr"></div>
       <p class="name">Меня зовут Сергей Никитченко</p>
       <span class="grey">
       <p>Нашел себя на направлении Front-End разработчика</p>
@@ -47,40 +48,54 @@
     </div>
   </section>
   <section id="works" class="works">
-    <div class="task">
-      <div>
-        <p> Поиск минимального элемента массива:</p>
-        <input id="getMin" placeholder="Введите числа через запятую">
-        <p class="btn"><button id="getMinButton">Click</button></p>
-      </div>
-      <div>
-        <p>Поиск парных чисел: </p>
-        <input id="getEven" placeholder="Введите числа через запятую">
-        <p class="btn"><button id="getEvenButton">Click</button></p>
+    <h2>Тестовые задания</h2>
+    <div class="hr"></div>
+    <div class="works__content">
+      <div class="task">
+        <div>
+          <p> Поиск минимального элемента массива:</p>
+          <form>
+            <input id= "getMin" type="text" placeholder="Введите числа через запятую">
 
+            <button id="getMinButton" class="fa"></button>
+          </form>
+        </div>
+        <div>
+          <p>Поиск парных чисел: </p>
+          <form>
+            <input id= "getEven" type="text" placeholder="Введите числа через запятую">
+            <button id="getEvenButton" class="fa"></button>
+          </form>
+        </div>
+        <div>
+          <p>Введите пользователя: </p>
+          <form>
+            <input id= "searchByName" type="text" placeholder="Введите имя пользователя">
+            <button id="searchByNameButton" class="fa"></button>
+          </form>
+        </div>
       </div>
-      <div>
-        <p>Введите пользователя: </p>
-        <input id="searchByName" placeholder="Введите имя пользователя">
-        <p class="btn"><button id="searchByNameButton">Click</button></p>
-      </div>
-    </div>
-    <div class="result">
-      <div>
-        <span>Минимальный элемент массива:</span>
-        <br>
-        <span id="minNameResult"> Значение не введено</span>
-      </div>
-      <div>
-        <span>Парные числа массива</span>
-        <br>
-        <span id="getEvenResult"> Значение не введено</span>
-      </div>
-      <div>
-        <span>Поиск пользователей</span>
-        <br>
-
-        <span id="searchByNameResult"> Значение не введено</span>
+      <div class="result">
+        <h3 id="result__name">Решение</h3>
+        <div>
+          <p>Здесь будет отображаться результат</p>
+          <p id="result__content"></p>
+<!--          <div>-->
+<!--            <span>Минимальный элемент массива:</span>-->
+<!--            <br>-->
+<!--            <span id="minNameResult"> Значение не введено</span>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <span>Парные числа массива</span>-->
+<!--            <br>-->
+<!--            <span id="getEvenResult"> Значение не введено</span>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <span>Поиск пользователей</span>-->
+<!--            <br>-->
+<!--            <span id="searchByNameResult"> Значение не введено</span>-->
+<!--          </div>-->
+        </div>
       </div>
     </div>
   </section>

@@ -22,7 +22,7 @@ const getMin = () => {
             min = getText[i];
         }
     }
-    document.getElementById('minNameResult').innerHTML = min;
+    replaceHtmlDom("p","result__content", min)
 };
 
 const getEven = () => {
@@ -33,21 +33,21 @@ const getEven = () => {
             if (getText[i])
                 array.push(getText[i]);
         }
-    document.getElementById('getEvenResult').innerHTML = array;
+    replaceHtmlDom("p","result__content",array)
 };
 
 const searchByName = () => {
     const getText = document.getElementById('searchByName').value;
     const result = searchByNameArr.filter(item => item.name == getText);
     if (result.length < 1) {
-        replaceHtmlDom("p","searchByNameResult","Данного пользователя нету в базе данных")
+        replaceHtmlDom("p","result__content","Данного пользователя нету в базе данных")
     }
     else {
         const resultOut = [];
         for (let i=0; i < result.length; i++){
             resultOut.push(result[i].name + ': ' + result[i].birthDate)
         }
-        replaceHtmlDom(resultOut.length > 1 ? "textarea" : "p", "searchByNameResult", resultOut);
+        replaceHtmlDom(resultOut.length > 1 ? "textarea" : "p", "result__content", resultOut);
     }
     console.log(result);
 };

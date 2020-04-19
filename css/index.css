@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background-image: url("../res/header.png");
   background-size: 100%;
@@ -22,21 +23,33 @@ header {
   header .slogan {
     text-align: center; }
     header .slogan h2 {
-      font-size: 60pt; }
+      font-size: 60pt;
+      padding: 0; }
+    header .slogan .hr {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 50px; }
     header .slogan * {
-      padding: 50px; }
+      margin-bottom: 50px; }
 
 .summary {
   display: grid;
   grid-template-columns: 3fr 1fr;
   justify-items: center;
   align-items: center; }
+  .summary .summary__text {
+    margin: 100px; }
   .summary .name {
     text-align: end;
     font-weight: bold;
     opacity: 0.8; }
+  .summary .hr {
+    margin: 30px 0 20px auto;
+    width: 20%; }
   .summary * {
     padding-top: 10px; }
+  .summary h2 {
+    text-transform: uppercase; }
   .summary ul {
     padding: 15px 0; }
     .summary ul li {
@@ -53,32 +66,79 @@ header {
       object-position: 0 0; }
 
 .works {
-  height: 55vh;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-items: center; }
+  height: 100%;
+  margin: 80px 0; }
   .works h2 {
-    text-transform: uppercase; }
-  .works .task > * {
-    margin: 50px; }
-    .works .task > * input {
-      width: 100%; }
-    .works .task > * p {
-      margin-bottom: 15px; }
-  .works .btn {
-    padding: 5px;
-    text-align: end; }
-  .works .result {
+    text-align: center; }
+  .works .hr {
+    margin: 30px auto 50px; }
+  .works .works__content {
+    padding: 50px 0;
+    color: white;
     display: grid;
+    grid-template-columns: 3fr 2fr;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-image: url("../res/header.png");
-    color: white; }
-    .works .result > * {
-      margin-left: 5em; }
+    justify-items: center;
+    background-image: url("../res/header.png"); }
+    .works .works__content .task {
+      padding: 20px;
+      margin: 50px; }
+      .works .works__content .task form {
+        position: relative;
+        width: 400px;
+        margin: 0 auto; }
+      .works .works__content .task input, .works .works__content .task select {
+        opacity: 0.5;
+        height: 42px;
+        padding-left: 10px;
+        border-radius: 0 5px;
+        outline: none;
+        text-align: center;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #8C7156;
+        color: whitesmoke;
+        width: 90%; }
+      .works .works__content .task input:hover {
+        opacity: 1; }
+      .works .works__content .task button {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: #8C7156;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer; }
+      .works .works__content .task button:before {
+        content: "";
+        font-size: 16px;
+        color: #F9F0DA; }
+      .works .works__content .task p {
+        margin-bottom: 15px; }
+    .works .works__content .result {
+      display: grid;
+      grid-template-rows: 3em 1fr;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      background-color: whitesmoke;
+      color: #282c34;
+      opacity: 0.75; }
+      .works .works__content .result > * {
+        margin-left: 5em; }
+        .works .works__content .result > * * {
+          margin-bottom: 20px; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+div {
+  padding: 30px 0; }
 
 .footer {
   height: 100%;
@@ -113,16 +173,31 @@ header {
     background-image: url("../res/header.png"); }
 
 body {
+  font-family: "Segoe UI";
   font-size: 16pt; }
+  body h1 {
+    font-size: 25pt;
+    font-weight: bold;
+    text-transform: uppercase; }
   body h2 {
-    padding: 50px 0;
-    font-size: 42pt; }
+    font-size: 36pt;
+    text-transform: uppercase; }
   body .grey {
     margin: 20px; }
     body .grey * {
       margin: 5px;
       opacity: 0.5; }
   body section {
-    height: 80vh; }
+    height: 100%;
+    margin-top: 80px; }
+  body .hr {
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    width: 10%;
+    height: 1px; }
+
+* {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=index.css.map */
