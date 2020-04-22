@@ -54,24 +54,23 @@
       <div class="task">
         <div>
           <p> Поиск минимального элемента массива:</p>
-          <form onsubmit="return false">
-            <input id= "getMin" type="text" placeholder="Введите числа через запятую" >
-
-            <button id="getMinButton" class="fa"></button>
+          <form onsubmit="return false;">
+            <input id= "getMin" type="text" placeholder="Введите числа через запятую">
+            <button id="getMinButton" onclick="buttonClick(getMin.id, getMin.value)" class="fa"></button>
           </form>
         </div>
         <div>
           <p>Поиск парных чисел: </p>
-          <form>
+          <form onsubmit="return false;">
             <input id= "getEven" type="text" placeholder="Введите числа через запятую">
-            <button id="getEvenButton" class="fa"></button>
+            <button id="getEvenButton" onclick="buttonClick(getEven.id, getEven.value)" class="fa"></button>
           </form>
         </div>
         <div>
           <p>Введите пользователя: </p>
-          <form>
+          <form onsubmit="return false;">
             <input id= "searchByName" type="text" placeholder="Введите имя пользователя">
-            <button id="searchByNameButton" class="fa"></button>
+            <button id="searchByNameButton" onclick="buttonClick(searchByName.id, searchByName.value)" class="fa"></button>
           </form>
         </div>
       </div>
@@ -80,21 +79,6 @@
         <div>
           <p>Здесь будет отображаться результат</p>
           <p id="result__content"></p>
-<!--          <div>-->
-<!--            <span>Минимальный элемент массива:</span>-->
-<!--            <br>-->
-<!--            <span id="minNameResult"> Значение не введено</span>-->
-<!--          </div>-->
-<!--          <div>-->
-<!--            <span>Парные числа массива</span>-->
-<!--            <br>-->
-<!--            <span id="getEvenResult"> Значение не введено</span>-->
-<!--          </div>-->
-<!--          <div>-->
-<!--            <span>Поиск пользователей</span>-->
-<!--            <br>-->
-<!--            <span id="searchByNameResult"> Значение не введено</span>-->
-<!--          </div>-->
         </div>
       </div>
     </div>

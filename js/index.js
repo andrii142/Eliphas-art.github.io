@@ -13,45 +13,51 @@ const replaceHtmlDom = (tegName, id, content, idReplace = id) => {
     afterResult.replaceWith(teg);
 };
 
-const getMin = () => {
-    const getText = document.getElementById('getMin').value.split(',');
-    let  min =+ getText[0];
-    for (let i = 0; i < getText.length; i++) {
-        getText[i] = +getText[i];
-        if (getText[i] < min) {
-            min = getText[i];
+const getMin1 = (arr) => {
+    if(typeof arr !== "object")
+        arr = arr.split(',');
+    let  min =+ arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +arr[i];
+        if (arr[i] < min) {
+            min = arr[i];
         }
     }
-    replaceHtmlDom("p","result__content", min)
+    //Добавить ретерн
+    return min;
 };
 
-const getEven = () => {
-    const getText = document.getElementById('getEven').value.split(',');
+
+const getEven1 = (arr) => {
+    if(typeof arr !== "object")
+        arr = arr.split(',');
     const array = [];
-    for (let i = 0; i < getText.length; i++)
-        if (Math.ceil(getText[i] / 2) == getText[i] / 2) {
-            if (getText[i])
-                array.push(getText[i]);
+    for (let i = 0; i < arr.length; i++)
+        if (Math.ceil(arr[i] / 2) == arr[i] / 2) {
+            if (arr[i])
+                array.push(arr[i]);
         }
-    replaceHtmlDom("p","result__content",array)
+    return array
 };
-
-const searchByName = () => {
-    const getText = document.getElementById('searchByName').value;
-    const result = searchByNameArr.filter(item => item.name == getText);
+const searchByName1 = (arr) => {
+    const result = searchByNameArr.filter(item => item.name == arr);
     if (result.length < 1) {
-        replaceHtmlDom("p","result__content","Данного пользователя нету в базе данных")
+        return ("Данного пользователя нету в базе данных");
     }
     else {
         const resultOut = [];
         for (let i=0; i < result.length; i++){
-            resultOut.push(result[i].name + ': ' + result[i].birthDate+ ", \n")
+            resultOut.push(result[i].name + ': ' + result[i].birthDate+ "")
         }
-        replaceHtmlDom(resultOut.length > 1 ? "textarea" : "p", "result__content", resultOut);
+        return resultOut;
     }
-    console.log(result);
 };
 
-document.getElementById('getMinButton').addEventListener('click', getMin);
-document.getElementById('getEvenButton').addEventListener('click', getEven);
-document.getElementById('searchByNameButton').addEventListener('click', searchByName);
+const buttonClick = (functions, content) => {
+    if (functions == "getMin")
+        replaceHtmlDom("p", "result__content", getMin1(content));
+    else if(functions == "getEven")
+        replaceHtmlDom("p", "result__content", getEven1(content));
+    else
+        replaceHtmlDom("textarea", "result__content", searchByName1(content));
+};
