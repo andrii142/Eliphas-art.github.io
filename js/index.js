@@ -1,3 +1,4 @@
+
 const searchByNameArr = [
     {name: "Jonny Walker", birthDate: "1995-12-17"},
     {name: "Andrew", birthDate: "2001-10-29"},
@@ -17,14 +18,13 @@ const replaceHtmlDom = (tegName, id, content, idReplace = id) => {
 const getMin = (arr) => {
     if(typeof arr !== "object")
         arr = arr.split(',');
-    let  min =+ arr[0];
+    let  min = arr[0];
     for (let i = 0; i < arr.length; i++) {
         arr[i] = +arr[i];
         if (arr[i] < min) {
             min = arr[i];
         }
     }
-    //Добавить ретерн
     return min;
 };
 
@@ -40,15 +40,15 @@ const getEven = (arr) => {
     return array
 };
 
-const searchByName = (arr) => {
-    const result = searchByNameArr.filter(item => item.name == arr);
+const searchByName = (name) => {
+    const result = searchByNameArr.filter(item => item.name == name);
     if (result.length < 1) {
         return ("Данного пользователя нету в базе данных");
     }
     else {
         const resultOut = [];
         for (let i=0; i < result.length; i++){
-            resultOut.push(result[i].name + ': ' + result[i].birthDate+ "")
+            resultOut.push(result[i].name + ': ' + result[i].birthDate + "")
         }
         return resultOut;
     }
@@ -59,7 +59,6 @@ const buttonClick = (functions, content) => {
         replaceHtmlDom("p", "result__content", getMin(content));
         console.log(getMin(content))
     }
-
     else if(functions == "getEven"){
         replaceHtmlDom("p", "result__content", getEven(content));
         console.log(getEven(content))
