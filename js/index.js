@@ -5,6 +5,7 @@ const searchByNameArr = [
     {name: "Andrew", birthDate: "2011-05-09"},
     {name: "Nikitchenko", birthDate: "2011-05-09"},
 ];
+
 const replaceHtmlDom = (tegName, id, content, idReplace = id) => {
     const teg = document.createElement(tegName);
     teg.id = id;
@@ -13,7 +14,7 @@ const replaceHtmlDom = (tegName, id, content, idReplace = id) => {
     afterResult.replaceWith(teg);
 };
 
-const getMin1 = (arr) => {
+const getMin = (arr) => {
     if(typeof arr !== "object")
         arr = arr.split(',');
     let  min =+ arr[0];
@@ -27,8 +28,7 @@ const getMin1 = (arr) => {
     return min;
 };
 
-
-const getEven1 = (arr) => {
+const getEven = (arr) => {
     if(typeof arr !== "object")
         arr = arr.split(',');
     const array = [];
@@ -39,7 +39,8 @@ const getEven1 = (arr) => {
         }
     return array
 };
-const searchByName1 = (arr) => {
+
+const searchByName = (arr) => {
     const result = searchByNameArr.filter(item => item.name == arr);
     if (result.length < 1) {
         return ("Данного пользователя нету в базе данных");
@@ -54,10 +55,17 @@ const searchByName1 = (arr) => {
 };
 
 const buttonClick = (functions, content) => {
-    if (functions == "getMin")
-        replaceHtmlDom("p", "result__content", getMin1(content));
-    else if(functions == "getEven")
-        replaceHtmlDom("p", "result__content", getEven1(content));
-    else
-        replaceHtmlDom("textarea", "result__content", searchByName1(content));
+    if (functions == "getMin"){
+        replaceHtmlDom("p", "result__content", getMin(content));
+        console.log(getMin(content))
+    }
+
+    else if(functions == "getEven"){
+        replaceHtmlDom("p", "result__content", getEven(content));
+        console.log(getEven(content))
+    }
+    else{
+        replaceHtmlDom("textarea", "result__content", searchByName(content));
+        console.log(searchByName(content))
+    }
 };
